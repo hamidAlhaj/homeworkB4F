@@ -73,6 +73,14 @@ body {
   margin-top: 5px;
 }
 
+.stats {
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  min-width: 140px;
+}
+
 /* ---------- Filter buttons ---------- */
 
 .filters {
@@ -124,9 +132,7 @@ body {
   padding: 15px 18px;
   margin-bottom: 12px;
 }
-.task-item:hover {
-  border-color: #3b6ef5;
-}
+
 .task-status {
   border-radius: 20px;
   color: #ffffff;
@@ -144,10 +150,6 @@ body {
   background-color: #e08b1a;
 }
 
-/* ---------- Small screens ---------- */
-
-/* On a narrow screen there is no room for three cards in one row,
-   so we turn the row into a column. */
 @media (max-width: 600px) {
   .header h1 {
     font-size: 26px;
@@ -161,12 +163,35 @@ body {
     flex-wrap: wrap;
   }
 }
-.footer {
-  background-color: #ffffff;
-  color: gray;
-  padding: 30px 20px;
-  text-align: center;
-  border-top: 1px solid #e2e5ea;
-}
+
 @media (max-width: 480px) {
+  /* Each filter button takes a full row so it is easy to tap. */
+  .filter-button {
+    width: 100%;
+  }
+
+  /* The title and the status no longer fit side by side. */
+  /* .task-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  } */
+}
+
+.footer {
+  border-top: 1px solid #e2e5ea;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.task-item:hover {
+  border-color: #3b6ef5;
+  cursor: pointer;
+}
+#progressText {
+  text-align: center;
+  color: #6b7280;
+  font-size: small;
 }
