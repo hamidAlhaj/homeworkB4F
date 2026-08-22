@@ -150,6 +150,10 @@ body {
   background-color: #e08b1a;
 }
 
+/* ---------- Small screens ---------- */
+
+/* On a narrow screen there is no room for three cards in one row,
+   so we turn the row into a column. */
 @media (max-width: 600px) {
   .header h1 {
     font-size: 26px;
@@ -190,8 +194,58 @@ body {
   border-color: #3b6ef5;
   cursor: pointer;
 }
-#progressText {
-  text-align: center;
+
+.progress {
   color: #6b7280;
-  font-size: small;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.search {
+  margin-top: 15px;
+}
+
+.search-input {
+  border: 1px solid #e2e5ea;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 10px 14px;
+  width: 100%;
+}
+
+.search-input:focus {
+  border-color: #3b6ef5;
+  outline: none;
+}
+
+/* ---------- Messages ---------- */
+
+.message {
+  color: #6b7280;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.message.error {
+  background-color: #fdeaea;
+  border: 1px solid #d64545;
+  border-radius: 10px;
+  color: #d64545;
+  padding: 15px;
+}
+
+/* Anything with this class is not shown on the page. */
+.hidden {
+  display: none;
+}
+.task-user {
+  color: #6b7280;
+  font-size: 14px;
+}
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
