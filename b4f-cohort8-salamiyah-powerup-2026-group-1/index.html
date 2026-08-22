@@ -42,9 +42,26 @@
         <button class="filter-button" id="filterPending">Pending</button>
       </section>
 
+      <section class="search">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search tasks..."
+        />
+      </section>
+
+      <p class="message" id="loadingMessage">Loading tasks...</p>
+
+      <p class="message error" id="errorMessage">
+        We could not load the tasks. Please check your internet connection and
+        refresh the page.
+      </p>
+
       <!-- The list of tasks. -->
       <ul class="task-list" id="taskList"></ul>
-      <p id="progressText"></p>
+
+      <p class="progress" id="progressText"></p>
     </main>
 
     <footer class="footer">
